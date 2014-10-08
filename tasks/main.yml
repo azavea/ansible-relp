@@ -1,0 +1,8 @@
+---
+- name: Install RELP support for Rsyslog
+  apt: pkg=rsyslog-relp={{ relp_version }} state=present
+
+- name: Configure RELP
+  template: src=01-omrelp.conf.j2 dest=/etc/rsyslog.d/01-omrelp.conf
+  notify:
+    - Restart Rsyslog
