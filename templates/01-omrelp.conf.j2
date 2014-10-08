@@ -1,0 +1,5 @@
+$ModLoad omrelp
+$RepeatedMsgReduction off
+
+$template ls_json,"{\"@version\":1,\"@timestamp\":\"%timestamp:1:19:date-rfc3339%.%timestamp:1:3:date-subseconds%+00:00\",%HOSTNAME:::jsonf:source_host%,\"message\":\"%timestamp% %app-name%:%msg:::json%\",%syslogfacility-text:::jsonf:facility%,%syslogseverity-text:::jsonf:severity%,%app-name:::jsonf:program%,%procid:::jsonf:processid%}"
+*.* :omrelp:{{ relp_host }}:{{ relp_port }};ls_json
