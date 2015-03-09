@@ -1,4 +1,4 @@
-## HEAD
+## 0.1.2
 
 - Required minimum Ansible version is now 1.8
 - Uses wildcards for package minor versions
