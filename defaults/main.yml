@@ -1,4 +1,4 @@
 ---
-relp_version: "7.4.4-1ubuntu2.3"
+relp_version: "7.4.*"
 relp_host: localhost
 relp_port: 20514
